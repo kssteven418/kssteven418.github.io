@@ -3279,3 +3279,66 @@ input[type="button"].btn-block {
 .dropleft {
   position: relative;
 }
+
+ul.ul-edu {
+  list-style: none;
+  padding-left: 0; /* Removes padding which is usually for bullets */
+  margin-left: 0; /* Removes any margin on the left */
+  margin-top: 6px;
+}
+
+ul.ul-edu li {
+  position: relative;
+  padding: 0 15px 4px 3px;
+}
+
+ul.ul-edu li .description p {
+  margin: 0;
+}
+
+ul.ul-edu li .description p.course {
+  font-size: 0.9rem;
+}
+
+ul.ul-edu li .description p.institution {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.wg-contact .fa-li {
+  position: absolute;
+  left: -3.14285714rem;
+  width: 2rem;
+  top: 0.14285714em;
+  text-align: center;
+}
+
+.card.course {
+  margin-bottom: 1rem;
+}
+
+.card.course:last-of-type {
+  margin-bottom: 0;
+}
+
+.course .card-subtitle a {
+  border-bottom: solid 1px transparent;
+}
+
+.course .card-subtitle a:hover {
+  border-bottom: solid 1px;
+  text-decoration: none;
+}
+
+ul.ul-edu li .description p.course {
+  font-size: 0.9rem;
+}
+
+.edu-item {
+  display: flex;
+  align-items: center; /* This aligns the items vertically in the center */
+}
+
+.edu-icon {
+  margin-right: 10px; /* Adds some space between the image and the description */
+}
