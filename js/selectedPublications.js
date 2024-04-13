@@ -1,16 +1,31 @@
 import { publications } from "./publicationsData.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  const iconMappings = {
+    Code: "/img/icons/github.png",
+    Blog: "/img/icons/blog.png",
+  };
+
+  // Function to generate code links buttons with icons if applicable
+  function generateCodeLinksButtons(codeLinks) {
+    return Object.entries(codeLinks)
+      .map(([key, url]) => {
+        const iconHtml = iconMappings[key]
+          ? `<img src="${iconMappings[key]}" alt="${key} icon" style="height: 16px; vertical-align: middle; margin-right: 3px; margin-left: -3px; margin-top: -13px; padding: 0; margin-bottom: -10px">`
+          : "";
+
+        const buttonType =
+          key === "Code" ? "btn-outline-primary" : "btn-outline-success";
+        return `<a class="btn ${buttonType} btn-page-header" href="${url}" target="_blank" rel="noopener">${iconHtml}${key}</a>`;
+      })
+      .join("\n");
+  }
+
   function addPublication(item) {
     const container = document.getElementById(
       "selected-publications-container"
     );
-    const codeLinksButton = Object.entries(item.codeLinks)
-      .map(
-        ([key, url]) =>
-          `<a class="btn btn-outline-primary btn-page-header" href="${url}" target="_blank" rel="noopener">${key}</a>`
-      )
-      .join("\n");
+    const codeLinksButton = generateCodeLinksButtons(item.codeLinks);
 
     const htmlContent = `
             <div class="flex-row">
@@ -41,10 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   publications.filter((pub) => pub.selected).forEach(addPublication);
 
-  const container2 = document.getElementById("publications-container"); // Ensure you have a div with this ID in your HTML
+  const container2 = document.getElementById("publications-container");
   const fragment = document.createDocumentFragment();
   publications.forEach((publication) => {
     const div = document.createElement("div");
+    const codeLinksButton = generateCodeLinksButtons(publication.codeLinks);
     const publicationHtml = `
         <p class="text-large" style="margin-bottom:0;">
             <a href="${publication.pdfLink}">
@@ -56,12 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="text" style="margin:0; padding-top:0;">
             ${publication.conference}
         </p>
-        ${Object.entries(publication.codeLinks)
-          .map(
-            ([key, url]) =>
-              `<a class="btn btn-outline-primary btn-page-header" href="${url}" target="_blank" rel="noopener">${key}</a>`
-          )
-          .join("\n")}
+        ${codeLinksButton}
 
     `;
     div.innerHTML = publicationHtml;
