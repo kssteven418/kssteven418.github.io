@@ -44,6 +44,7 @@ const publications = [
     pdfLink: "https://arxiv.org/pdf/2312.04511.pdf",
     codeLinks: {
       Code: "https://github.com/SqueezeAILab/LLMCompiler",
+      Talk: "https://www.youtube.com/watch?v=aoLtTIYAafY",
       LlamaIndex:
         "https://docs.llamaindex.ai/en/stable/api_reference/packs/agents_llm_compiler/?h=llmcompiler#llama_index.packs.agents_llm_compiler.LLMCompilerAgentPack",
       LangChain:

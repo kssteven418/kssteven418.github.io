@@ -3,6 +3,7 @@ import { publications } from "./publicationsData.js";
 document.addEventListener("DOMContentLoaded", function () {
   const iconMappings = {
     Code: "/img/icons/github.png",
+    Talk: "/img/icons/youtube.png",
     Blog: "/img/icons/blog.png",
   };
 
