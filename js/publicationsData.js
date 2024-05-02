@@ -52,7 +52,7 @@ const publications = [
     },
     authors:
       "<b>Sehoon Kim*</b>, Suhong Moon*, Ryan Tabrizi, Nicholas Lee, Michael W. Mahoney, Kurt Keutzer, Amir Gholami",
-    conference: "Preprint, 2023",
+    conference: "International Conference on Machine Learning (ICML), 2024",
     selected: true,
   },
   {
@@ -74,7 +74,7 @@ const publications = [
     },
     authors:
       "<b>Sehoon Kim*</b>, Coleman Hooper*, Amir Gholami*, Zhen Dong, Xiuyu Li, Sheng Shen, Michael W. Mahoney, Kurt Keutzer",
-    conference: "Preprint, 2023",
+    conference: "International Conference on Machine Learning (ICML), 2024",
     selected: true,
   },
   {
