@@ -1,5 +1,43 @@
 const publications = [
   {
+    title: "LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement",
+    pdfLink: "https://arxiv.org/pdf/2403.15042.pdf",
+    codeLinks: { Code: "https://github.com/SqueezeAILab/LLM2LLM" },
+    authors:
+      "Nicholas Lee*, Thanakul Wattanawong*, <b>Sehoon Kim</b>, Karttikeya Mangalam, Sheng Shen, Gopala Anumanchipali, Michael W Mahoney, Kurt Keutzer, Amir Gholami",
+    conference: "The Association for Computational Linguistics (ACL), 2024",
+    selected: false,
+  },
+  {
+    imagePath: "img/thumbnails/llmcompiler.png",
+    title: "An LLM Compiler for Parallel Function Calling",
+    pdfLink: "https://arxiv.org/pdf/2312.04511.pdf",
+    codeLinks: {
+      Code: "https://github.com/SqueezeAILab/LLMCompiler",
+      Talk: "https://www.youtube.com/watch?v=aoLtTIYAafY",
+      LlamaIndex:
+        "https://docs.llamaindex.ai/en/stable/api_reference/packs/agents_llm_compiler/?h=llmcompiler#llama_index.packs.agents_llm_compiler.LLMCompilerAgentPack",
+      LangChain:
+        "https://github.com/langchain-ai/langgraph/blob/main/examples/llm-compiler/LLMCompiler.ipynb",
+    },
+    authors:
+      "<b>Sehoon Kim*</b>, Suhong Moon*, Ryan Tabrizi, Nicholas Lee, Michael W. Mahoney, Kurt Keutzer, Amir Gholami",
+    conference: "International Conference on Machine Learning (ICML), 2024",
+    selected: true,
+  },
+  {
+    imagePath: "img/thumbnails/sqllm.png",
+    title: "SqueezeLLM: Dense-and-Sparse Quantization",
+    pdfLink: "https://arxiv.org/pdf/2306.07629.pdf",
+    codeLinks: {
+      Code: "https://github.com/SqueezeAILab/SqueezeLLM",
+    },
+    authors:
+      "<b>Sehoon Kim*</b>, Coleman Hooper*, Amir Gholami*, Zhen Dong, Xiuyu Li, Sheng Shen, Michael W. Mahoney, Kurt Keutzer",
+    conference: "International Conference on Machine Learning (ICML), 2024",
+    selected: true,
+  },
+  {
     title: "AI and Memory Wall",
     pdfLink: "https://arxiv.org/pdf/2403.14123.pdf",
     codeLinks: {
@@ -8,15 +46,6 @@ const publications = [
     authors:
       "Amir Gholami, Zhewei Yao, <b>Sehoon Kim</b>, Coleman Hooper, Michael W. Mahoney, Kurt Keutzer",
     conference: "IEEE MICRO Journal Special Issue, 2024",
-    selected: false,
-  },
-  {
-    title: "LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement",
-    pdfLink: "https://arxiv.org/pdf/2403.15042.pdf",
-    codeLinks: { Code: "https://github.com/SqueezeAILab/LLM2LLM" },
-    authors:
-      "Nicholas Lee*, Thanakul Wattanawong*, <b>Sehoon Kim</b>, Karttikeya Mangalam, Sheng Shen, Gopala Anumanchipali, Michael W Mahoney, Kurt Keutzer, Amir Gholami",
-    conference: "Preprint, 2024",
     selected: false,
   },
   {
@@ -39,23 +68,6 @@ const publications = [
     selected: false,
   },
   {
-    imagePath: "img/thumbnails/llmcompiler.png",
-    title: "An LLM Compiler for Parallel Function Calling",
-    pdfLink: "https://arxiv.org/pdf/2312.04511.pdf",
-    codeLinks: {
-      Code: "https://github.com/SqueezeAILab/LLMCompiler",
-      Talk: "https://www.youtube.com/watch?v=aoLtTIYAafY",
-      LlamaIndex:
-        "https://docs.llamaindex.ai/en/stable/api_reference/packs/agents_llm_compiler/?h=llmcompiler#llama_index.packs.agents_llm_compiler.LLMCompilerAgentPack",
-      LangChain:
-        "https://github.com/langchain-ai/langgraph/blob/main/examples/llm-compiler/LLMCompiler.ipynb",
-    },
-    authors:
-      "<b>Sehoon Kim*</b>, Suhong Moon*, Ryan Tabrizi, Nicholas Lee, Michael W. Mahoney, Kurt Keutzer, Amir Gholami",
-    conference: "International Conference on Machine Learning (ICML), 2024",
-    selected: true,
-  },
-  {
     title: "SPEED: Speculative Pipelined Execution for Efficient Decoding",
     pdfLink: "https://arxiv.org/pdf/2310.12072.pdf",
     codeLinks: {},
@@ -64,18 +76,6 @@ const publications = [
     conference:
       "NeurIPS Workshop on Efficient Natural Language and Speech Processing, 2023",
     selected: false,
-  },
-  {
-    imagePath: "img/thumbnails/sqllm.png",
-    title: "SqueezeLLM: Dense-and-Sparse Quantization",
-    pdfLink: "https://arxiv.org/pdf/2306.07629.pdf",
-    codeLinks: {
-      Code: "https://github.com/SqueezeAILab/SqueezeLLM",
-    },
-    authors:
-      "<b>Sehoon Kim*</b>, Coleman Hooper*, Amir Gholami*, Zhen Dong, Xiuyu Li, Sheng Shen, Michael W. Mahoney, Kurt Keutzer",
-    conference: "International Conference on Machine Learning (ICML), 2024",
-    selected: true,
   },
   {
     title: "Full Stack Optimization of Transformer Inference: a Survey",
