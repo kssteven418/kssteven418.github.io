@@ -1,5 +1,26 @@
 const publications = [
   {
+    title:
+      "Characterizing Prompt Compression Methods for Long Context Inference",
+    pdfLink: "https://arxiv.org/pdf/2407.08892.pdf",
+    codeLinks: {},
+    authors:
+      "Siddharth Jha, Lutfi Eren Erdogan, <b>Sehoon Kim</b>, Kurt Keutzer, Amir Gholami",
+    conference:
+      "ICML Workshop on Efficient Systems for Foundation Models (<b>Oral</b>), 2024",
+    selected: false,
+  },
+  {
+    title: "Learned Best-Effort LLM Serving",
+    pdfLink: "https://arxiv.org/pdf/2401.07886.pdf",
+    codeLinks: {},
+    authors:
+      "Siddharth Jha, Coleman Hooper, Xiaoxuan Liu, <b>Sehoon Kim</b>, Kurt Keutzer",
+    conference:
+      "ICML Workshop on Efficient Systems for Foundation Models, 2024",
+    selected: false,
+  },
+  {
     title: "LLM2LLM: Boosting LLMs with Novel Iterative Data Enhancement",
     pdfLink: "https://arxiv.org/pdf/2403.15042.pdf",
     codeLinks: { Code: "https://github.com/SqueezeAILab/LLM2LLM" },
@@ -55,15 +76,6 @@ const publications = [
     codeLinks: { Code: "https://github.com/SqueezeAILab/KVQuant" },
     authors:
       "Coleman Hooper, <b>Sehoon Kim</b>, Hiva Mohammadzadeh, Michael W Mahoney, Yakun Sophia Shao, Kurt Keutzer, Amir Gholami",
-    conference: "Preprint, 2024",
-    selected: false,
-  },
-  {
-    title: "Learned Best-Effort LLM Serving",
-    pdfLink: "https://arxiv.org/pdf/2401.07886.pdf",
-    codeLinks: {},
-    authors:
-      "Siddharth Jha, Coleman Hooper, Xiaoxuan Liu, <b>Sehoon Kim</b>, Kurt Keutzer",
     conference: "Preprint, 2024",
     selected: false,
   },
