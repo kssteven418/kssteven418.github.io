@@ -1,6 +1,39 @@
 const publications = [
   {
     title:
+      "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization",
+    pdfLink: "https://arxiv.org/pdf/2401.18079.pdf",
+    codeLinks: { Code: "https://github.com/SqueezeAILab/KVQuant" },
+    authors:
+      "Coleman Hooper, <b>Sehoon Kim</b>, Hiva Mohammadzadeh, Michael W Mahoney, Yakun Sophia Shao, Kurt Keutzer, Amir Gholami",
+    conference:
+      "Conference on Neural Information Processing Systems (NeurIPS), 2024",
+    selected: false,
+  },
+  {
+    title:
+      "Efficient and Scalable Estimation of Tool Representations in Vector Space",
+    pdfLink: "https://arxiv.org/pdf/2409.02141",
+    codeLinks: { Code: "https://github.com/SqueezeAILab/Tool2Vec" },
+    authors:
+      "Suhong Moon*, Siddharth Jh*a, Lutfi Eren Erdogan, <b>Sehoon Kim</b>, Woosang Lim, Kurt Keutzer, Amir Gholami",
+    conference: "Preprint, 2024",
+    selected: false,
+  },
+  {
+    title: "TinyAgent: Function Calling at the Edge",
+    pdfLink: "https://arxiv.org/pdf/2409.00608",
+    codeLinks: {
+      Code: "https://github.com/SqueezeAILab/TinyAgent",
+      Blog: "https://bair.berkeley.edu/blog/2024/05/29/tiny-agent/",
+    },
+    authors:
+      "Lutfi Eren Erdogan*, Nicholas Lee*, Siddharth Jha*, <b>Sehoon Kim</b>, Ryan Tabrizi, Suhong Moon, Coleman Hooper, Gopala Anumanchipalli, Kurt Keutzer, Amir Gholami",
+    conference: "Preprint, 2024",
+    selected: false,
+  },
+  {
+    title:
       "Characterizing Prompt Compression Methods for Long Context Inference",
     pdfLink: "https://arxiv.org/pdf/2407.08892.pdf",
     codeLinks: {},
@@ -67,16 +100,6 @@ const publications = [
     authors:
       "Amir Gholami, Zhewei Yao, <b>Sehoon Kim</b>, Coleman Hooper, Michael W. Mahoney, Kurt Keutzer",
     conference: "IEEE MICRO Journal Special Issue, 2024",
-    selected: false,
-  },
-  {
-    title:
-      "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization",
-    pdfLink: "https://arxiv.org/pdf/2401.18079.pdf",
-    codeLinks: { Code: "https://github.com/SqueezeAILab/KVQuant" },
-    authors:
-      "Coleman Hooper, <b>Sehoon Kim</b>, Hiva Mohammadzadeh, Michael W Mahoney, Yakun Sophia Shao, Kurt Keutzer, Amir Gholami",
-    conference: "Preprint, 2024",
     selected: false,
   },
   {
