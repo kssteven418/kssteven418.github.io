@@ -16,7 +16,7 @@ const publications = [
     pdfLink: "https://arxiv.org/pdf/2409.02141",
     codeLinks: { Code: "https://github.com/SqueezeAILab/Tool2Vec" },
     authors:
-      "Suhong Moon*, Siddharth Jh*a, Lutfi Eren Erdogan, <b>Sehoon Kim</b>, Woosang Lim, Kurt Keutzer, Amir Gholami",
+      "Suhong Moon*, Siddharth Jha*, Lutfi Eren Erdogan, <b>Sehoon Kim</b>, Woosang Lim, Kurt Keutzer, Amir Gholami",
     conference: "Preprint, 2024",
     selected: false,
   },
@@ -29,7 +29,8 @@ const publications = [
     },
     authors:
       "Lutfi Eren Erdogan*, Nicholas Lee*, Siddharth Jha*, <b>Sehoon Kim</b>, Ryan Tabrizi, Suhong Moon, Coleman Hooper, Gopala Anumanchipalli, Kurt Keutzer, Amir Gholami",
-    conference: "Preprint, 2024",
+    conference:
+      "Empirical Methods in Natural Language Processing (EMNLP) Demo Track, 2024",
     selected: false,
   },
   {
