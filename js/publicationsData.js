@@ -1,5 +1,18 @@
 const publications = [
   {
+    title: "TinyAgent: Function Calling at the Edge",
+    pdfLink: "https://arxiv.org/pdf/2409.00608",
+    codeLinks: {
+      Code: "https://github.com/SqueezeAILab/TinyAgent",
+      Blog: "https://bair.berkeley.edu/blog/2024/05/29/tiny-agent/",
+    },
+    authors:
+      "Lutfi Eren Erdogan*, Nicholas Lee*, Siddharth Jha*, <b>Sehoon Kim</b>, Ryan Tabrizi, Suhong Moon, Coleman Hooper, Gopala Anumanchipalli, Kurt Keutzer, Amir Gholami",
+    conference:
+      "Empirical Methods in Natural Language Processing (EMNLP) Demo Track, 2024",
+    selected: false,
+  },
+  {
     title:
       "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization",
     pdfLink: "https://arxiv.org/pdf/2401.18079.pdf",
@@ -18,19 +31,6 @@ const publications = [
     authors:
       "Suhong Moon*, Siddharth Jha*, Lutfi Eren Erdogan, <b>Sehoon Kim</b>, Woosang Lim, Kurt Keutzer, Amir Gholami",
     conference: "Preprint, 2024",
-    selected: false,
-  },
-  {
-    title: "TinyAgent: Function Calling at the Edge",
-    pdfLink: "https://arxiv.org/pdf/2409.00608",
-    codeLinks: {
-      Code: "https://github.com/SqueezeAILab/TinyAgent",
-      Blog: "https://bair.berkeley.edu/blog/2024/05/29/tiny-agent/",
-    },
-    authors:
-      "Lutfi Eren Erdogan*, Nicholas Lee*, Siddharth Jha*, <b>Sehoon Kim</b>, Ryan Tabrizi, Suhong Moon, Coleman Hooper, Gopala Anumanchipalli, Kurt Keutzer, Amir Gholami",
-    conference:
-      "Empirical Methods in Natural Language Processing (EMNLP) Demo Track, 2024",
     selected: false,
   },
   {
