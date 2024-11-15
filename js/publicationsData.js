@@ -1,5 +1,15 @@
 const publications = [
   {
+    imagePath: "img/thumbnails/sqattn.png",
+    title: "Squeezed Attention: Accelerating Long Context Length LLM Inference",
+    pdfLink: "https://arxiv.org/pdf/2411.09688.pdf",
+    codeLinks: {},
+    authors:
+      "Coleman Hooper*, <b>Sehoon Kim*</b>, Hiva Mohammadzadeh, Monishwaran Maheswaran, June Paik, Michael W. Mahoney, Kurt Keutzer, Amir Gholami",
+    conference: "Preprint, 2024",
+    selected: true,
+  },
+  {
     title: "TinyAgent: Function Calling at the Edge",
     pdfLink: "https://arxiv.org/pdf/2409.00608",
     codeLinks: {
