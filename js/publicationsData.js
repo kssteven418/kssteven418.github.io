@@ -1,5 +1,27 @@
 const publications = [
   {
+    title: "ETS: Efficient Tree Search for Inference-Time Scaling",
+    pdfLink: "https://arxiv.org/pdf/2502.13575",
+    codeLinks: {
+      Code: "https://github.com/SqueezeAILab/ETS",
+    },
+    authors:
+    "Coleman Hooper, <b>Sehoon Kim</b>, Suhong Moon, Kerem Dilmen, Monishwaran Maheswaran, Nicholas Lee, Michael W Mahoney, Sophia Shao, Kurt Keutzer, Amir Gholami",
+    conference:
+      "Preprint, 2025",
+    selected: false,
+  },
+  {
+    title: "QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache",
+    pdfLink: "https://arxiv.org/pdf/2409.00608",
+    codeLinks: {},
+    authors:
+    "Rishabh Tiwari*, Haocheng Xi*, Aditya Tomar*, Coleman Hooper, <b>Sehoon Kim</b>, Maxwell Horton, Mahyar Najibi, Michael W Mahoney, Kurt Keutzer, Amir Gholami",
+    conference:
+      "Preprint, 2025",
+    selected: false,
+  },
+  {
     imagePath: "img/thumbnails/sqattn.png",
     title: "Squeezed Attention: Accelerating Long Context Length LLM Inference",
     pdfLink: "https://arxiv.org/pdf/2411.09688.pdf",
