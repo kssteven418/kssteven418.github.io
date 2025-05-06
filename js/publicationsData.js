@@ -1,14 +1,12 @@
 const publications = [
   {
-    title: "ETS: Efficient Tree Search for Inference-Time Scaling",
-    pdfLink: "https://arxiv.org/pdf/2502.13575",
-    codeLinks: {
-      Code: "https://github.com/SqueezeAILab/ETS",
-    },
+    title: "Plan-and-Act: Improving Planning of Agents for Long-Horizon Tasks",
+    pdfLink: "https://arxiv.org/pdf/2503.09572",
+    codeLinks: {},
     authors:
-    "Coleman Hooper, <b>Sehoon Kim</b>, Suhong Moon, Kerem Dilmen, Monishwaran Maheswaran, Nicholas Lee, Michael W Mahoney, Sophia Shao, Kurt Keutzer, Amir Gholami",
+    "Lutfi Eren Erdoga*, Nicholas Lee*, <b>Sehoon Kim</b>, Suhong Moon, Hiroki Furuta, Gopala Anumanchipalli, Kurt Keutzer, Amir Gholami",
     conference:
-      "Preprint, 2025",
+      "International Conference on Machine Learning (ICML), 2025",
     selected: false,
   },
   {
@@ -17,6 +15,18 @@ const publications = [
     codeLinks: {},
     authors:
     "Rishabh Tiwari*, Haocheng Xi*, Aditya Tomar*, Coleman Hooper, <b>Sehoon Kim</b>, Maxwell Horton, Mahyar Najibi, Michael W Mahoney, Kurt Keutzer, Amir Gholami",
+    conference:
+      "International Conference on Machine Learning (ICML), 2025",
+    selected: false,
+  },
+  {
+    title: "ETS: Efficient Tree Search for Inference-Time Scaling",
+    pdfLink: "https://arxiv.org/pdf/2502.13575",
+    codeLinks: {
+      Code: "https://github.com/SqueezeAILab/ETS",
+    },
+    authors:
+    "Coleman Hooper, <b>Sehoon Kim</b>, Suhong Moon, Kerem Dilmen, Monishwaran Maheswaran, Nicholas Lee, Michael W Mahoney, Sophia Shao, Kurt Keutzer, Amir Gholami",
     conference:
       "Preprint, 2025",
     selected: false,
