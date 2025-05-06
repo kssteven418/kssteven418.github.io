@@ -4,7 +4,7 @@ const publications = [
     pdfLink: "https://arxiv.org/pdf/2503.09572",
     codeLinks: {},
     authors:
-    "Lutfi Eren Erdoga*, Nicholas Lee*, <b>Sehoon Kim</b>, Suhong Moon, Hiroki Furuta, Gopala Anumanchipalli, Kurt Keutzer, Amir Gholami",
+    "Lutfi Eren Erdogan*, Nicholas Lee*, <b>Sehoon Kim</b>, Suhong Moon, Hiroki Furuta, Gopala Anumanchipalli, Kurt Keutzer, Amir Gholami",
     conference:
       "International Conference on Machine Learning (ICML), 2025",
     selected: false,
