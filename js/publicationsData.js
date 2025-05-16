@@ -1,5 +1,15 @@
 const publications = [
   {
+    imagePath: "img/thumbnails/sqattn.png",
+    title: "Squeezed Attention: Accelerating Long Context Length LLM Inference",
+    pdfLink: "https://arxiv.org/pdf/2411.09688.pdf",
+    codeLinks: {},
+    authors:
+      "Coleman Hooper*, <b>Sehoon Kim*</b>, Hiva Mohammadzadeh, Monishwaran Maheswaran, June Paik, Michael W. Mahoney, Kurt Keutzer, Amir Gholami",
+    conference: "The Association for Computational Linguistics (ACL), 2025",
+    selected: true,
+  },
+  {
     title: "Plan-and-Act: Improving Planning of Agents for Long-Horizon Tasks",
     pdfLink: "https://arxiv.org/pdf/2503.09572",
     codeLinks: {},
@@ -30,16 +40,6 @@ const publications = [
     conference:
       "Preprint, 2025",
     selected: false,
-  },
-  {
-    imagePath: "img/thumbnails/sqattn.png",
-    title: "Squeezed Attention: Accelerating Long Context Length LLM Inference",
-    pdfLink: "https://arxiv.org/pdf/2411.09688.pdf",
-    codeLinks: {},
-    authors:
-      "Coleman Hooper*, <b>Sehoon Kim*</b>, Hiva Mohammadzadeh, Monishwaran Maheswaran, June Paik, Michael W. Mahoney, Kurt Keutzer, Amir Gholami",
-    conference: "Preprint, 2024",
-    selected: true,
   },
   {
     title: "TinyAgent: Function Calling at the Edge",
