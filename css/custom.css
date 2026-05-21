@@ -1,0 +1,160 @@
+/*************************************************************************
+ * Your custom CSS file
+ *************************************************************************/
+
+.custom-dropdown {
+  width: 240px;
+}
+
+.custom-textbox {
+  width: 240px;
+}
+
+#dialog-1,
+#dialog-2,
+#dialog-3,
+#dialog-4,
+#share-dialog {
+  display: none;
+}
+
+#share-url {
+  width: 100%;
+  -webkit-touch-callout: default !important;
+  -webkit-user-select: text !important;
+  -khtml-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+#share-url-copy-prompt {
+  display: none;
+  color: #007bff;
+}
+
+.flex-item > h2 + hr {
+  margin-top: 4px;
+  margin-bottom: 6px;
+  border-top-color: #666666;
+}
+
+.content > .flex-row > .flex-item.flex-column {
+  flex: 1 1 auto;
+}
+
+.text-large {
+  font-size: 18px;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: -4px;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #c7c7c7;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+.profile-links a:hover {
+  background-color: #f2f2f2;
+  border-color: #555555;
+  text-decoration: none;
+}
+
+.profile-links img {
+  object-fit: contain;
+  max-width: 20px;
+  max-height: 20px;
+  filter: brightness(0);
+}
+
+.profile-links .linkedin-icon {
+  max-width: 22px;
+  max-height: 22px;
+}
+
+.profile-links .x-icon {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.section-item-list {
+  margin-top: 0;
+}
+
+.section-item {
+  margin: 0 0 12px 0;
+}
+
+.work-item-list .section-item:not(:last-child),
+.education-item-list .section-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.work-item-list,
+.education-item-list {
+  padding-top: 4px;
+}
+
+.section-divider-gap {
+  padding-top: 4px;
+}
+
+#publications-container > div:first-child .text-large {
+  margin-top: 0;
+}
+
+.section-divider-gap > .section-item:first-child .section-item-title {
+  margin-top: 0;
+}
+
+.work-item-list .section-item-title,
+.education-item-list .section-item-title {
+  margin-top: 0;
+}
+
+.section-item-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  column-gap: 12px;
+  margin-bottom: 0;
+}
+
+.section-item-meta {
+  margin-left: auto;
+  font-size: 11pt;
+  text-align: right;
+}
+
+.section-item-detail {
+  margin: 0;
+  padding-top: 0;
+  font-size: 11pt;
+}
+
+.collapsible-publications > summary {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.selected-publications-summary {
+  font-size: 11pt;
+}
+
+.publication-author-name {
+  font-weight: 700;
+}
