@@ -1,5 +1,16 @@
 const publications = [
   {
+    title: "Multipole Attention for Efficient Long Context Reasoning",
+    pdfLink: "https://arxiv.org/pdf/2506.13059",
+    codeLinks: {
+      Code: "https://github.com/SqueezeAILab/MultipoleAttention",
+    },
+    authors:
+      "Coleman Hooper*, Sebastian Zhao*, Luca Manolache, <b>Sehoon Kim</b>, Michael W Mahoney, Yakun Sophia Shao, Kurt Keutzer, Amir Gholami",
+    conference: "Conference on Neural Information Processing Systems (NeurIPS), 2025",
+    selected: false,
+  },
+  {
     imagePath: "img/thumbnails/sqattn.png",
     title: "Squeezed Attention: Accelerating Long Context Length LLM Inference",
     pdfLink: "https://arxiv.org/pdf/2411.09688.pdf",
