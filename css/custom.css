@@ -184,10 +184,62 @@ img {
   font-weight: 600;
 }
 
+.hero-lab-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #444;
+  color: #b5b5b5;
+  font-size: 15px;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.hero-lab-link:hover,
+.hero-lab-link:focus-visible {
+  border-color: #fff;
+  color: #fff;
+}
+
+.hero-link-arrow {
+  width: 1.35em;
+  height: 1.35em;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.hero-link-arrow-shaft {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: 18px 12px;
+  transition: opacity 180ms ease, transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-link-arrow-head {
+  transform: translateX(-3px);
+  transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-lab-link:hover .hero-link-arrow-shaft,
+.hero-lab-link:focus-visible .hero-link-arrow-shaft {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.hero-lab-link:hover .hero-link-arrow-head,
+.hero-lab-link:focus-visible .hero-link-arrow-head {
+  transform: translateX(0);
+}
+
 .hero-socials {
   display: flex;
   gap: 8px;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .hero-socials a {
@@ -304,6 +356,7 @@ img {
   margin: 0 4px;
   vertical-align: middle;
   border-radius: 3px;
+  filter: invert(1);
 }
 
 .content p a {
@@ -672,6 +725,11 @@ img {
   .reveal {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+
+  .hero-link-arrow-shaft,
+  .hero-link-arrow-head {
     transition: none;
   }
 }
