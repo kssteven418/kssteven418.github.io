@@ -1,93 +1,73 @@
 import { publications } from "./publicationsData.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const iconMappings = {
-    Code: "/img/icons/github.png",
-    Talk: "/img/icons/youtube.png",
-    Blog: "/img/icons/blog.png",
-  };
+document.addEventListener("DOMContentLoaded", () => {
+  const allPublications = document.getElementById("publications-container");
+  const selectedPublications = document.getElementById(
+    "selected-publications-container"
+  );
 
-  // Function to generate code links buttons with icons if applicable
-  function generateCodeLinksButtons(codeLinks) {
-    return Object.entries(codeLinks)
-      .map(([key, url]) => {
-        const iconHtml = iconMappings[key]
-          ? `<img src="${iconMappings[key]}" alt="${key} icon" style="height: 16px; vertical-align: middle; margin-right: 3px; margin-left: -3px; margin-top: -13px; padding: 0; margin-bottom: -10px">`
-          : "";
+  if (!allPublications || !selectedPublications) return;
 
-        const buttonType =
-          key === "Code" ? "btn-outline-primary" : "btn-outline-success";
-        return `<a class="btn ${buttonType} btn-page-header" href="${url}" target="_blank" rel="noopener">${iconHtml}${key}</a>`;
-      })
-      .join("\n");
-  }
-
-  function highlightAuthorName(authors) {
-    return authors.replace(
+  const highlightAuthorName = (authors) =>
+    authors.replace(
       /<b>(Sehoon Kim\*?)<\/b>|(Sehoon Kim\*?)/g,
       (_, boldName, plainName) =>
         `<strong class="publication-author-name">${boldName || plainName}</strong>`
     );
-  }
 
-  function addPublication(item) {
-    const container = document.getElementById(
-      "selected-publications-container"
-    );
-    const codeLinksButton = generateCodeLinksButtons(item.codeLinks);
-    const authors = highlightAuthorName(item.authors);
+  const renderLinks = (publication) => {
+    const links = [
+      ["Paper", publication.pdfLink],
+      ...Object.entries(publication.codeLinks),
+    ];
 
-    const htmlContent = `
-            <div class="flex-row">
-                <div class="flex-item flex-item-stretch flex-column">
-                    <img class="image max-width-500" src="${item.imagePath}">
-                </div>
-                <div class="flex-item flex-item-stretch-3 flex-column">
-                    <p class="text-large" style="margin-bottom:0;">
-                        <a href="${item.pdfLink}"><b>${item.title}</b></a>
-                    </p>
-                    <p class="text" style="margin:0; padding-top:0; font-size:11pt">
-                        ${authors}<br>
-                    </p>
-                    <p class="text" style="margin:0; padding-top:0;">
-                        ${item.conference}
-                    </p>
-                    <div class="button-container">
-                        ${codeLinksButton}
-                    </div>
+    return links
+      .map(
+        ([label, url]) =>
+          `<a class="publication-link" href="${url}" target="_blank" rel="noopener">${label}<span aria-hidden="true">↗</span></a>`
+      )
+      .join("");
+  };
 
-                </div>
-            </div>
-            <div><p class="text"></p></div>
-            <div><p class="text"></p></div>
-        `;
-    container.innerHTML += htmlContent;
-  }
+  const publicationFragment = document.createDocumentFragment();
 
-  publications.filter((pub) => pub.selected).forEach(addPublication);
-
-  const container2 = document.getElementById("publications-container");
-  const fragment = document.createDocumentFragment();
-  publications.forEach((publication) => {
-    const div = document.createElement("div");
-    const codeLinksButton = generateCodeLinksButtons(publication.codeLinks);
-    const authors = highlightAuthorName(publication.authors);
-    const publicationHtml = `
-        <p class="text-large" style="margin-bottom:0;">
-            <a href="${publication.pdfLink}">
-                <b>${publication.title}</b></a>
-        </p>
-        <p class="text" style="margin:0; padding-top:0; font-size:11pt">
-            ${authors}<br>
-        </p>
-        <p class="text" style="margin:0; padding-top:0;">
-            ${publication.conference}
-        </p>
-        ${codeLinksButton}
-
+  publications.forEach((publication, index) => {
+    const article = document.createElement("article");
+    article.className = "publication-row";
+    article.innerHTML = `
+      <div class="publication-index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</div>
+      <div class="publication-main">
+        <h3><a href="${publication.pdfLink}" target="_blank" rel="noopener">${publication.title}</a></h3>
+        <p>${highlightAuthorName(publication.authors)}</p>
+      </div>
+      <div class="publication-meta">
+        <p>${publication.conference}</p>
+        <div class="publication-links">${renderLinks(publication)}</div>
+      </div>
     `;
-    div.innerHTML = publicationHtml;
-    fragment.appendChild(div);
+    publicationFragment.appendChild(article);
   });
-  container2.appendChild(fragment);
+
+  allPublications.appendChild(publicationFragment);
+
+  const selectedFragment = document.createDocumentFragment();
+
+  publications
+    .filter((publication) => publication.selected)
+    .forEach((publication) => {
+      const article = document.createElement("article");
+      article.className = "selected-card";
+      article.innerHTML = `
+        <img src="${publication.imagePath}" alt="" loading="lazy">
+        <div class="selected-card-copy">
+          <h3><a href="${publication.pdfLink}" target="_blank" rel="noopener">${publication.title}</a></h3>
+          <p>${highlightAuthorName(publication.authors)}</p>
+          <p class="selected-card-venue">${publication.conference}</p>
+          <div class="publication-links">${renderLinks(publication)}</div>
+        </div>
+      `;
+      selectedFragment.appendChild(article);
+    });
+
+  selectedPublications.appendChild(selectedFragment);
 });
