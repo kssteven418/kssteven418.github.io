@@ -7,7 +7,7 @@ const publications = [
     },
     authors:
       "Coleman Hooper*, Sebastian Zhao*, Luca Manolache, <b>Sehoon Kim</b>, Michael W Mahoney, Yakun Sophia Shao, Kurt Keutzer, Amir Gholami",
-    conference: "Conference on Neural Information Processing Systems (NeurIPS), 2025",
+    conference: "NeurIPS 2025",
     selected: false,
   },
   {
@@ -19,7 +19,7 @@ const publications = [
     },
     authors:
       "Coleman Hooper*, <b>Sehoon Kim*</b>, Hiva Mohammadzadeh, Monishwaran Maheswaran, June Paik, Michael W. Mahoney, Kurt Keutzer, Amir Gholami",
-    conference: "The Association for Computational Linguistics (ACL), 2025",
+    conference: "ACL 2025",
     selected: true,
   },
   {
@@ -30,8 +30,7 @@ const publications = [
     },
     authors:
     "Lutfi Eren Erdogan*, Nicholas Lee*, <b>Sehoon Kim</b>, Suhong Moon, Hiroki Furuta, Gopala Anumanchipalli, Kurt Keutzer, Amir Gholami",
-    conference:
-      "International Conference on Machine Learning (ICML), 2025",
+    conference: "ICML 2025",
     selected: false,
   },
   {
@@ -42,8 +41,7 @@ const publications = [
     },
     authors:
     "Rishabh Tiwari*, Haocheng Xi*, Aditya Tomar*, Coleman Hooper, <b>Sehoon Kim</b>, Maxwell Horton, Mahyar Najibi, Michael W Mahoney, Kurt Keutzer, Amir Gholami",
-    conference:
-      "International Conference on Machine Learning (ICML), 2025",
+    conference: "ICML 2025",
     selected: false,
   },
   {
@@ -67,8 +65,7 @@ const publications = [
     },
     authors:
       "Lutfi Eren Erdogan*, Nicholas Lee*, Siddharth Jha*, <b>Sehoon Kim</b>, Ryan Tabrizi, Suhong Moon, Coleman Hooper, Gopala Anumanchipalli, Kurt Keutzer, Amir Gholami",
-    conference:
-      "Empirical Methods in Natural Language Processing (EMNLP) Demo Track, 2024",
+    conference: "EMNLP Demo Track 2024",
     selected: false,
   },
   {
@@ -78,8 +75,7 @@ const publications = [
     codeLinks: { Code: "https://github.com/SqueezeAILab/KVQuant" },
     authors:
       "Coleman Hooper, <b>Sehoon Kim</b>, Hiva Mohammadzadeh, Michael W Mahoney, Yakun Sophia Shao, Kurt Keutzer, Amir Gholami",
-    conference:
-      "Conference on Neural Information Processing Systems (NeurIPS), 2024",
+    conference: "NeurIPS 2024",
     selected: false,
   },
   {
@@ -99,8 +95,7 @@ const publications = [
     codeLinks: {},
     authors:
       "Siddharth Jha, Lutfi Eren Erdogan, <b>Sehoon Kim</b>, Kurt Keutzer, Amir Gholami",
-    conference:
-      "ICML Workshop on Efficient Systems for Foundation Models (<b>Oral</b>), 2024",
+    conference: "ICML Workshop 2024",
     selected: false,
   },
   {
@@ -109,8 +104,7 @@ const publications = [
     codeLinks: {},
     authors:
       "Siddharth Jha, Coleman Hooper, Xiaoxuan Liu, <b>Sehoon Kim</b>, Kurt Keutzer",
-    conference:
-      "ICML Workshop on Efficient Systems for Foundation Models, 2024",
+    conference: "ICML Workshop 2024",
     selected: false,
   },
   {
@@ -119,7 +113,7 @@ const publications = [
     codeLinks: { Code: "https://github.com/SqueezeAILab/LLM2LLM" },
     authors:
       "Nicholas Lee*, Thanakul Wattanawong*, <b>Sehoon Kim</b>, Karttikeya Mangalam, Sheng Shen, Gopala Anumanchipali, Michael W Mahoney, Kurt Keutzer, Amir Gholami",
-    conference: "The Association for Computational Linguistics (ACL), 2024",
+    conference: "ACL 2024",
     selected: false,
   },
   {
@@ -136,7 +130,7 @@ const publications = [
     },
     authors:
       "<b>Sehoon Kim*</b>, Suhong Moon*, Ryan Tabrizi, Nicholas Lee, Michael W. Mahoney, Kurt Keutzer, Amir Gholami",
-    conference: "International Conference on Machine Learning (ICML), 2024",
+    conference: "ICML 2024",
     selected: true,
   },
   {
@@ -148,7 +142,7 @@ const publications = [
     },
     authors:
       "<b>Sehoon Kim*</b>, Coleman Hooper*, Amir Gholami*, Zhen Dong, Xiuyu Li, Sheng Shen, Michael W. Mahoney, Kurt Keutzer",
-    conference: "International Conference on Machine Learning (ICML), 2024",
+    conference: "ICML 2024",
     selected: true,
   },
   {
@@ -159,7 +153,7 @@ const publications = [
     },
     authors:
       "Amir Gholami, Zhewei Yao, <b>Sehoon Kim</b>, Coleman Hooper, Michael W. Mahoney, Kurt Keutzer",
-    conference: "IEEE MICRO Journal Special Issue, 2024",
+    conference: "IEEE Micro Journal Special Issue, 2024",
     selected: false,
   },
   {
@@ -168,8 +162,7 @@ const publications = [
     codeLinks: {},
     authors:
       "Coleman Hooper, <b>Sehoon Kim</b>, Hiva Mohammadzadeh, Hasan Genc, Kurt Keutzer, Amir Gholami, Sophia Shao",
-    conference:
-      "NeurIPS Workshop on Efficient Natural Language and Speech Processing, 2023",
+    conference: "NeurIPS Workshop 2023",
     selected: false,
   },
   {
@@ -178,7 +171,7 @@ const publications = [
     codeLinks: {},
     authors:
       "<b>Sehoon Kim*</b>, Coleman Hooper*, Thanakul Wattanawong, Minwoo Kang, Ruohan Yan, Hasan Genc, Grace Dinh, Qijing Huang, Kurt Keutzer, Michael W. Mahoney, Yakun Sophia Shao, Amir Gholami",
-    conference: "Preprint, 2023 (Short Version at ISCA ASSYST Workshop 2023)",
+    conference: "ISCA Workshop 2023",
     selected: false,
   },
   {
@@ -188,8 +181,7 @@ const publications = [
     codeLinks: { Code: "https://github.com/kssteven418/BigLittleDecoder" },
     authors:
       "<b>Sehoon Kim</b>, Karttikeya Mangalam, Suhong Moon, Jitendra Malik, Michael W. Mahoney, Amir Gholami, Kurt Keutzer",
-    conference:
-      "Conference on Neural Information Processing Systems (NeurIPS), 2023",
+    conference: "NeurIPS 2023",
     selected: true,
   },
   {
@@ -204,8 +196,7 @@ const publications = [
     },
     authors:
       "<b>Sehoon Kim*</b>, Amir Gholami*, Albert Shaw†, Nicholas Lee†, Karttikeya Mangalam, Jitendra Malik, Michael W. Mahoney, Kurt Keutzer",
-    conference:
-      "Conference on Neural Information Processing Systems (NeurIPS), 2022",
+    conference: "NeurIPS 2022",
     selected: true,
   },
   {
@@ -217,8 +208,7 @@ const publications = [
     },
     authors:
       "Woosuk Kwon*, <b>Sehoon Kim*</b>, Michael W. Mahoney, Joseph Hassoun, Kurt Keutzer, Amir Gholami",
-    conference:
-      "Conference on Neural Information Processing Systems (NeurIPS), 2022",
+    conference: "NeurIPS 2022",
     selected: true,
   },
   {
@@ -228,7 +218,7 @@ const publications = [
     codeLinks: { Code: "https://github.com/kssteven418/LTP" },
     authors:
       "<b>Sehoon Kim*</b>, Sheng Shen*, David Thorsley*, Amir Gholami*, Woosuk Kwon, Joseph Hassoun, Kurt Keutzer",
-    conference: "Conference on Knowledge Discovery and Data Mining (KDD), 2022",
+    conference: "KDD 2022",
     selected: true,
   },
   {
@@ -239,8 +229,7 @@ const publications = [
     codeLinks: { Code: "https://github.com/kssteven418/Q-ASR" },
     authors:
       "<b>Sehoon Kim</b>, Amir Gholami, Zhewei Yao, Nicholas Lee, Patrick Wang, Anirudda Nrusimha, Bohan Zhai, Tianren Gao, Michael W. Mahoney, Kurt Keutzer",
-    conference:
-      "International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2022",
+    conference: "ICASSP 2022",
     selected: true,
   },
   {
@@ -252,8 +241,7 @@ const publications = [
     },
     authors:
       "Shixing Yu*, Zhewei Yao*, Amir Gholami*, Zhen Dong*, <b>Sehoon Kim</b>, Michael W. Mahoney, Kurt Keutzer",
-    conference:
-      "Winter Conference on Applications of Computer Vision (WACV), 2022",
+    conference: "WACV 2022",
     selected: false,
   },
   {
@@ -263,8 +251,7 @@ const publications = [
     codeLinks: {},
     authors:
       "Amir Gholami*, <b>Sehoon Kim*</b>, Zhen Dong*, Zhewei Yao*, Michael W. Mahoney, Kurt Keutzer",
-    conference:
-      "Book Chapter: Low-Power Computer Vision: Improving the Efficiency of Artificial Intelligence, 2021",
+    conference: "Low-Power Computer Vision book chapter, 2021",
     selected: false,
   },
   {
@@ -274,8 +261,7 @@ const publications = [
     codeLinks: {},
     authors:
       "Gyeong-In Yu, Saeed Amizadeh, <b>Sehoon Kim</b>, Artidoro Pagnoni, Ce Zhang, Byung-Gon Chun, Markus Weimer, Matteo Interlandi",
-    conference:
-      "International Conference on Very Large Data Bases (VLDB), 2021",
+    conference: "VLDB 2021",
     selected: false,
   },
   {
@@ -286,8 +272,7 @@ const publications = [
     codeLinks: {},
     authors:
       "Taebum Kim, Eunji Jeong, Geon-Woo Kim, Yunmo Koo, <b>Sehoon Kim</b>, Gyeong-In Yu, Byung-Gon Chun",
-    conference:
-      "Conference on Neural Information Processing Systems (NeurIPS), 2021",
+    conference: "NeurIPS 2021",
     selected: false,
   },
   {
@@ -301,8 +286,7 @@ const publications = [
     },
     authors:
       "<b>Sehoon Kim*</b>, Amir Gholami*, Zhewei Yao*, Michael W. Mahoney, Kurt Keutzer",
-    conference:
-      "International Conference on Machine Learning (ICML, <b>Oral</b>), 2021",
+    conference: "ICML 2021 Oral",
     selected: true,
   },
   {
@@ -312,8 +296,7 @@ const publications = [
     codeLinks: {},
     authors:
       "Jingyi Xu, <b>Sehoon Kim</b>, Borivoje Nikolic, Yakun Sophia Shao",
-    conference:
-      "International Symposium on Performance Analysis of Systems and Software (ISPASS), 2021",
+    conference: "ISPASS 2021",
     selected: false,
   },
 ];

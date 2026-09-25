@@ -1,4 +1,4 @@
-import { publications } from "./publicationsData.js";
+import { publications } from "./publicationsData.js?v=20260925-2";
 
 const renderPublications = () => {
   const container = document.getElementById("publications-container");
