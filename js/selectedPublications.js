@@ -28,7 +28,13 @@ const renderPublications = () => {
     return links
       .map(
         ([label, url]) =>
-          `<a class="publication-link" href="${url}" target="_blank" rel="noopener">${label}<span aria-hidden="true">↗</span></a>`
+          `<a class="publication-link" href="${url}" target="_blank" rel="noopener">
+            ${label}
+            <svg class="link-arrow" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24">
+              <line class="link-arrow-shaft" x1="9" x2="18" y1="12" y2="12"></line>
+              <path class="link-arrow-head" d="m14 8 4 4-4 4"></path>
+            </svg>
+          </a>`
       )
       .join("");
   };
