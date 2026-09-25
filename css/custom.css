@@ -449,6 +449,36 @@ img {
   letter-spacing: -0.025em;
 }
 
+.content .section-item-title a {
+  border-bottom: 0;
+  transition: color 180ms ease;
+}
+
+.content .section-item-title a::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 0.42em;
+  color: #777;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62em;
+  font-weight: 500;
+  letter-spacing: 0;
+  transform: translateY(-0.22em);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.content .section-item-title a:hover,
+.content .section-item-title a:focus-visible {
+  border-bottom: 0;
+  color: #fff;
+}
+
+.content .section-item-title a:hover::after,
+.content .section-item-title a:focus-visible::after {
+  color: #d7d7d3;
+  transform: translate(0.12em, -0.34em);
+}
+
 .section-item-meta {
   margin-left: auto;
   color: #999;
