@@ -76,6 +76,8 @@ img {
 }
 
 .header-link {
+  position: relative;
+  isolation: isolate;
   display: inline-flex;
   min-width: 70px;
   align-items: center;
@@ -89,6 +91,61 @@ img {
   font-weight: 600;
   letter-spacing: 0.04em;
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+@property --seal-rainbow-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.header-link::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  padding: 2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--seal-rainbow-angle),
+    transparent 0deg 258deg,
+    #ff4f91 278deg,
+    #ffd166 304deg,
+    #58e6e6 330deg,
+    #8b6cff 350deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  pointer-events: none;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes seal-rainbow-lap {
+  0% {
+    --seal-rainbow-angle: 0deg;
+    opacity: 0;
+  }
+
+  10%,
+  82% {
+    opacity: 1;
+  }
+
+  100% {
+    --seal-rainbow-angle: 360deg;
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header-link:hover::after,
+  .header-link:focus-visible::after {
+    animation: seal-rainbow-lap 1100ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .header-link:hover {
@@ -726,5 +783,10 @@ img {
   .hero-link-arrow-shaft,
   .hero-link-arrow-head {
     transition: none;
+  }
+
+  .header-link:hover::after,
+  .header-link:focus-visible::after {
+    animation: none;
   }
 }
