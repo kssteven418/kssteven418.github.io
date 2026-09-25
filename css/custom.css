@@ -346,9 +346,10 @@ img {
 
 .section-item-meta {
   margin-left: auto;
-  color: var(--faint);
+  color: #999;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 500;
   text-align: right;
 }
 
@@ -366,8 +367,8 @@ img {
 .publications-intro {
   max-width: 760px;
   margin: 0 0 32px;
-  color: #aaa;
-  font-size: 15px;
+  color: #bdbdba;
+  font-size: 17px;
   line-height: 1.65;
 }
 
@@ -407,7 +408,7 @@ img {
   max-width: 760px;
   margin: 0;
   color: var(--foreground);
-  font-size: clamp(17px, 1.7vw, 21px);
+  font-size: clamp(20px, 1.8vw, 23px);
   font-weight: 500;
   letter-spacing: -0.025em;
   line-height: 1.3;
