@@ -1,8 +1,11 @@
 import { publications } from "./publicationsData.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+const renderPublications = () => {
   const container = document.getElementById("publications-container");
   if (!container) return;
+
+  // Keep the renderer idempotent when a preview tool restores a cached page.
+  container.replaceChildren();
 
   const getYear = (publication) =>
     publication.conference.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? "Other";
@@ -73,4 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
   fragment.appendChild(note);
 
   container.appendChild(fragment);
-});
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", renderPublications, { once: true });
+} else {
+  renderPublications();
+}
