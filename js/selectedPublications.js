@@ -1,12 +1,13 @@
 import { publications } from "./publicationsData.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const allPublications = document.getElementById("publications-container");
-  const selectedPublications = document.getElementById(
-    "selected-publications-container"
-  );
+  const container = document.getElementById("publications-container");
+  if (!container) return;
 
-  if (!allPublications || !selectedPublications) return;
+  const getYear = (publication) =>
+    publication.conference.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? "Other";
+
+  const years = [...new Set(publications.map(getYear))];
 
   const highlightAuthorName = (authors) =>
     authors.replace(
@@ -29,45 +30,47 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
   };
 
-  const publicationFragment = document.createDocumentFragment();
+  const fragment = document.createDocumentFragment();
 
-  publications.forEach((publication, index) => {
-    const article = document.createElement("article");
-    article.className = "publication-row";
-    article.innerHTML = `
-      <div class="publication-index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</div>
-      <div class="publication-main">
-        <h3><a href="${publication.pdfLink}" target="_blank" rel="noopener">${publication.title}</a></h3>
-        <p>${highlightAuthorName(publication.authors)}</p>
-      </div>
-      <div class="publication-meta">
-        <p>${publication.conference}</p>
-        <div class="publication-links">${renderLinks(publication)}</div>
-      </div>
-    `;
-    publicationFragment.appendChild(article);
+  years.forEach((year) => {
+    const yearGroup = document.createElement("section");
+    yearGroup.className = "year-group";
+    yearGroup.setAttribute("aria-labelledby", `publication-year-${year}`);
+
+    const yearHeading = document.createElement("h3");
+    yearHeading.id = `publication-year-${year}`;
+    yearHeading.textContent = year;
+    yearGroup.appendChild(yearHeading);
+
+    const publicationList = document.createElement("div");
+    publicationList.className = "publication-list";
+
+    publications
+      .filter((publication) => getYear(publication) === year)
+      .forEach((publication) => {
+        const article = document.createElement("article");
+        article.className = "publication-row";
+        article.innerHTML = `
+          <div class="publication-main">
+            <h4>${publication.title}</h4>
+            <p>${highlightAuthorName(publication.authors)}</p>
+          </div>
+          <div class="publication-meta">
+            <span>${publication.conference}</span>
+            <div class="publication-links">${renderLinks(publication)}</div>
+          </div>
+        `;
+        publicationList.appendChild(article);
+      });
+
+    yearGroup.appendChild(publicationList);
+    fragment.appendChild(yearGroup);
   });
 
-  allPublications.appendChild(publicationFragment);
+  const note = document.createElement("p");
+  note.className = "publication-note";
+  note.textContent = "* indicates equal contribution.";
+  fragment.appendChild(note);
 
-  const selectedFragment = document.createDocumentFragment();
-
-  publications
-    .filter((publication) => publication.selected)
-    .forEach((publication) => {
-      const article = document.createElement("article");
-      article.className = "selected-card";
-      article.innerHTML = `
-        <img src="${publication.imagePath}" alt="" loading="lazy">
-        <div class="selected-card-copy">
-          <h3><a href="${publication.pdfLink}" target="_blank" rel="noopener">${publication.title}</a></h3>
-          <p>${highlightAuthorName(publication.authors)}</p>
-          <p class="selected-card-venue">${publication.conference}</p>
-          <div class="publication-links">${renderLinks(publication)}</div>
-        </div>
-      `;
-      selectedFragment.appendChild(article);
-    });
-
-  selectedPublications.appendChild(selectedFragment);
+  container.appendChild(fragment);
 });

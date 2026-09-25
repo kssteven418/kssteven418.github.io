@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(
-    ".section-layout, .selected-section, .site-footer"
+    ".section-layout, .site-footer"
   );
 
   if (

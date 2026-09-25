@@ -357,57 +357,47 @@ img {
   font-size: 14px;
 }
 
-#publications-container {
+.year-group + .year-group {
+  margin-top: 100px;
+}
+
+.year-group > h3 {
+  margin: 0 0 28px;
+  color: #a6a6a6;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.publication-list {
   border-top: 1px solid var(--border);
 }
 
 .publication-row {
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) minmax(190px, 0.34fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(175px, 0.28fr);
+  gap: 32px;
   align-items: start;
   padding: 28px 0;
   border-bottom: 1px solid var(--border);
 }
 
-.publication-index {
-  padding-top: 4px;
-  color: #5f5f5f;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
-}
-
-.publication-main h3 {
+.publication-main h4 {
+  max-width: 760px;
   margin: 0;
-  font-size: clamp(17px, 1.55vw, 20px);
+  color: var(--foreground);
+  font-size: clamp(17px, 1.7vw, 21px);
   font-weight: 500;
   letter-spacing: -0.025em;
-  line-height: 1.38;
+  line-height: 1.3;
 }
 
-.publication-main h3 a {
-  transition: color 180ms ease;
-}
-
-.publication-main h3 a:hover {
-  color: var(--accent);
-}
-
-.publication-main p,
-.publication-meta p,
-.selected-card p {
-  margin: 11px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.62;
-}
-
-.publication-meta {
-  text-align: right;
-}
-
-.publication-meta > p {
-  margin-top: 2px;
+.publication-main p {
+  max-width: 780px;
+  margin: 12px 0 0;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .publication-author-name {
@@ -415,118 +405,48 @@ img {
   font-weight: 500;
 }
 
+.publication-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.45;
+  text-align: right;
+}
+
 .publication-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 14px;
-  margin-top: 14px;
-}
-
-.publication-meta .publication-links {
   justify-content: flex-end;
+  gap: 14px;
 }
 
 .publication-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #3e3e3e;
-  color: #bcbcbc;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 10px;
-  text-transform: uppercase;
-  transition: border-color 180ms ease, color 180ms ease;
+  gap: 6px;
+  color: #d4d4d4;
+  transition: color 160ms ease;
+}
+
+.publication-link span {
+  transition: transform 180ms ease;
 }
 
 .publication-link:hover {
-  border-color: var(--foreground);
   color: #fff;
 }
 
-.selected-section {
-  padding: 0 0 112px;
+.publication-link:hover span {
+  transform: translate(2px, -2px);
 }
 
-.collapsible-publications {
-  width: 100%;
-}
-
-.collapsible-publications > summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 21px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  color: #aaa;
-  cursor: pointer;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  list-style: none;
-  text-transform: uppercase;
-}
-
-.collapsible-publications > summary::-webkit-details-marker {
-  display: none;
-}
-
-.collapsible-publications > summary::after {
-  content: "+";
-  color: var(--foreground);
-  font-size: 17px;
-}
-
-.collapsible-publications[open] > summary::after {
-  content: "−";
-}
-
-#selected-publications-container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  margin-top: 34px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  background: var(--border);
-}
-
-.selected-card {
-  display: grid;
-  grid-template-columns: 136px minmax(0, 1fr);
-  gap: 20px;
-  padding: 22px;
-  background: var(--surface);
-}
-
-.selected-card > img {
-  width: 136px;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 10px;
-  filter: grayscale(1);
-}
-
-.selected-card h3 {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.35;
-}
-
-.selected-card h3 a:hover {
-  color: var(--accent);
-}
-
-.selected-card p {
+.publication-note {
+  margin: 28px 0 0;
+  color: #929292;
   font-size: 11px;
-}
-
-.selected-card .selected-card-venue {
-  color: #c8c8c4;
 }
 
 .site-footer {
@@ -671,24 +591,17 @@ img {
   }
 
   .publication-row {
-    grid-template-columns: 28px minmax(0, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .publication-meta {
-    grid-column: 2;
+    grid-column: 1;
+    align-items: flex-start;
     text-align: left;
   }
 
-  .publication-meta .publication-links {
+  .publication-links {
     justify-content: flex-start;
-  }
-
-  .selected-section {
-    padding-bottom: 76px;
-  }
-
-  #selected-publications-container {
-    grid-template-columns: 1fr;
   }
 
   .note-shell {
@@ -717,29 +630,6 @@ img {
 
   .hero-portrait {
     width: min(250px, 75vw);
-  }
-
-  .publication-row {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .publication-index,
-  .publication-meta {
-    grid-column: 1;
-  }
-
-  .publication-index {
-    padding-top: 0;
-  }
-
-  .selected-card {
-    grid-template-columns: 1fr;
-  }
-
-  .selected-card > img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
   }
 
   .site-footer {
