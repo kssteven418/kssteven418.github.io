@@ -35,7 +35,7 @@ const publications = [
   },
   {
     title: "QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache",
-    pdfLink: "https://arxiv.org/pdf/2409.00608",
+    pdfLink: "https://arxiv.org/pdf/2502.10424",
     codeLinks: {
       Code: "https://github.com/SqueezeAILab/QuantSpec",
     },
@@ -124,7 +124,7 @@ const publications = [
       Code: "https://github.com/SqueezeAILab/LLMCompiler",
       Talk: "https://www.youtube.com/watch?v=aoLtTIYAafY",
       LlamaIndex:
-        "https://docs.llamaindex.ai/en/stable/api_reference/packs/agents_llm_compiler/?h=llmcompiler#llama_index.packs.agents_llm_compiler.LLMCompilerAgentPack",
+        "https://pypi.org/project/llama-index-packs-agents-llm-compiler/",
       LangChain:
         "https://github.com/langchain-ai/langgraph/blob/main/examples/llm-compiler/LLMCompiler.ipynb",
     },
@@ -278,7 +278,7 @@ const publications = [
   {
     imagePath: "img/thumbnails/i-bert.png",
     title: "I-BERT: Integer-only BERT Quantization",
-    pdfLink: "http://proceedings.mlr.press/v139/kim21d/kim21d.pdf",
+    pdfLink: "https://proceedings.mlr.press/v139/kim21d/kim21d.pdf",
     codeLinks: {
       Code: "https://github.com/kssteven418/I-BERT",
       HuggingFace:
