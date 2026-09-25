@@ -362,6 +362,25 @@ img {
   margin-top: 56px;
 }
 
+.publications-intro {
+  max-width: 760px;
+  margin: 0 0 32px;
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.publications-intro a {
+  border-bottom: 1px solid #414141;
+  color: #e1e1dd;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.publications-intro a:hover {
+  border-color: var(--foreground);
+  color: #fff;
+}
+
 .year-group > h3 {
   margin: 0 0 28px;
   color: #a6a6a6;
