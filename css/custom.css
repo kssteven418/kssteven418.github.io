@@ -49,7 +49,7 @@ img {
 
 .shell,
 .content {
-  width: min(var(--shell), calc(100% - 48px));
+  width: min(var(--shell), calc(100% - 80px));
   margin-inline: auto;
 }
 
@@ -61,7 +61,7 @@ img {
   height: 72px;
   align-items: center;
   justify-content: space-between;
-  padding-inline: max(24px, calc((100vw - var(--shell)) / 2));
+  padding-inline: max(40px, calc((100vw - var(--shell)) / 2));
   border-bottom: 1px solid rgb(255 255 255 / 8%);
   background: rgb(5 5 5 / 78%);
   backdrop-filter: blur(18px);
@@ -583,11 +583,11 @@ img {
 @media (max-width: 800px) {
   .shell,
   .content {
-    width: min(var(--shell), calc(100% - 32px));
+    width: min(var(--shell), calc(100% - 48px));
   }
 
   .site-header {
-    padding-inline: 16px;
+    padding-inline: 24px;
   }
 
   .hero {
